@@ -1,0 +1,1740 @@
+
+Slave code.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000009b6  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000002  00800060  000009b6  00000a4a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000004  00800062  00800062  00000a4c  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000a4c  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000a7c  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000150  00000000  00000000  00000ab8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   0000137e  00000000  00000000  00000c08  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000855  00000000  00000000  00001f86  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000ba4  00000000  00000000  000027db  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000240  00000000  00000000  00003380  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000585  00000000  00000000  000035c0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000926  00000000  00000000  00003b45  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000f0  00000000  00000000  0000446b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 62 00 	jmp	0xc4	; 0xc4 <__ctors_end>
+   4:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+   8:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+   c:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  10:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  14:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  18:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  1c:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  20:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  24:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  28:	0c 94 fd 02 	jmp	0x5fa	; 0x5fa <__vector_10>
+  2c:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  30:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  34:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  38:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  3c:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  40:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  44:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  48:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  4c:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  50:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  54:	08 02       	muls	r16, r24
+  56:	fb 01       	movw	r30, r22
+  58:	fb 01       	movw	r30, r22
+  5a:	fb 01       	movw	r30, r22
+  5c:	fb 01       	movw	r30, r22
+  5e:	fb 01       	movw	r30, r22
+  60:	fb 01       	movw	r30, r22
+  62:	67 02       	muls	r22, r23
+  64:	1b 02       	muls	r17, r27
+  66:	2e 02       	muls	r18, r30
+  68:	41 02       	muls	r20, r17
+  6a:	54 02       	muls	r21, r20
+  6c:	8d 02       	muls	r24, r29
+  6e:	7a 02       	muls	r23, r26
+  70:	fb 01       	movw	r30, r22
+  72:	fb 01       	movw	r30, r22
+  74:	a0 02       	muls	r26, r16
+  76:	fb 01       	movw	r30, r22
+  78:	fb 01       	movw	r30, r22
+  7a:	fb 01       	movw	r30, r22
+  7c:	fb 01       	movw	r30, r22
+  7e:	fb 01       	movw	r30, r22
+  80:	fb 01       	movw	r30, r22
+  82:	b9 02       	muls	r27, r25
+  84:	a5 02       	muls	r26, r21
+  86:	aa 02       	muls	r26, r26
+  88:	af 02       	muls	r26, r31
+  8a:	b4 02       	muls	r27, r20
+  8c:	c5 02       	muls	r28, r21
+  8e:	be 02       	muls	r27, r30
+  90:	fb 01       	movw	r30, r22
+  92:	fb 01       	movw	r30, r22
+  94:	ca 02       	muls	r28, r26
+  96:	fb 01       	movw	r30, r22
+  98:	fb 01       	movw	r30, r22
+  9a:	fb 01       	movw	r30, r22
+  9c:	fb 01       	movw	r30, r22
+  9e:	fb 01       	movw	r30, r22
+  a0:	fb 01       	movw	r30, r22
+  a2:	e3 02       	muls	r30, r19
+  a4:	cf 02       	muls	r28, r31
+  a6:	d4 02       	muls	r29, r20
+  a8:	d9 02       	muls	r29, r25
+  aa:	de 02       	muls	r29, r30
+  ac:	ef 02       	muls	r30, r31
+  ae:	e8 02       	muls	r30, r24
+  b0:	fb 01       	movw	r30, r22
+  b2:	fb 01       	movw	r30, r22
+  b4:	fb 01       	movw	r30, r22
+  b6:	fb 01       	movw	r30, r22
+  b8:	fb 01       	movw	r30, r22
+  ba:	fb 01       	movw	r30, r22
+  bc:	fb 01       	movw	r30, r22
+  be:	fb 01       	movw	r30, r22
+  c0:	fb 01       	movw	r30, r22
+  c2:	f4 02       	muls	r31, r20
+
+000000c4 <__ctors_end>:
+  c4:	11 24       	eor	r1, r1
+  c6:	1f be       	out	0x3f, r1	; 63
+  c8:	cf e5       	ldi	r28, 0x5F	; 95
+  ca:	d8 e0       	ldi	r29, 0x08	; 8
+  cc:	de bf       	out	0x3e, r29	; 62
+  ce:	cd bf       	out	0x3d, r28	; 61
+
+000000d0 <__do_copy_data>:
+  d0:	10 e0       	ldi	r17, 0x00	; 0
+  d2:	a0 e6       	ldi	r26, 0x60	; 96
+  d4:	b0 e0       	ldi	r27, 0x00	; 0
+  d6:	e6 eb       	ldi	r30, 0xB6	; 182
+  d8:	f9 e0       	ldi	r31, 0x09	; 9
+  da:	02 c0       	rjmp	.+4      	; 0xe0 <__do_copy_data+0x10>
+  dc:	05 90       	lpm	r0, Z+
+  de:	0d 92       	st	X+, r0
+  e0:	a2 36       	cpi	r26, 0x62	; 98
+  e2:	b1 07       	cpc	r27, r17
+  e4:	d9 f7       	brne	.-10     	; 0xdc <__do_copy_data+0xc>
+
+000000e6 <__do_clear_bss>:
+  e6:	20 e0       	ldi	r18, 0x00	; 0
+  e8:	a2 e6       	ldi	r26, 0x62	; 98
+  ea:	b0 e0       	ldi	r27, 0x00	; 0
+  ec:	01 c0       	rjmp	.+2      	; 0xf0 <.do_clear_bss_start>
+
+000000ee <.do_clear_bss_loop>:
+  ee:	1d 92       	st	X+, r1
+
+000000f0 <.do_clear_bss_start>:
+  f0:	a6 36       	cpi	r26, 0x66	; 102
+  f2:	b2 07       	cpc	r27, r18
+  f4:	e1 f7       	brne	.-8      	; 0xee <.do_clear_bss_loop>
+  f6:	0e 94 d4 01 	call	0x3a8	; 0x3a8 <main>
+  fa:	0c 94 d9 04 	jmp	0x9b2	; 0x9b2 <_exit>
+
+000000fe <__bad_interrupt>:
+  fe:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000102 <ADC_vinit>:
+#include "std_macros.h"
+#include "STD_Types.h"
+void ADC_vinit(void)
+{
+	/*configure VREF to the internal voltage(2.56 V)*/
+	SET_BIT(ADMUX,REFS0);
+ 102:	3e 9a       	sbi	0x07, 6	; 7
+	SET_BIT(ADMUX,REFS1);
+ 104:	3f 9a       	sbi	0x07, 7	; 7
+	/*************************************/
+	SET_BIT(ADCSRA,ADEN); // ENable ADC
+ 106:	37 9a       	sbi	0x06, 7	; 6
+	
+	/* adjust ADC clock by select the division factor----->64*/
+	SET_BIT(ADCSRA,ADPS2);
+ 108:	32 9a       	sbi	0x06, 2	; 6
+	SET_BIT(ADCSRA,ADPS1);
+ 10a:	31 9a       	sbi	0x06, 1	; 6
+ 10c:	08 95       	ret
+
+0000010e <ADC_u16Read>:
+	/***********************************/
+}
+uint16 ADC_u16Read(void)
+{
+	uint16 read_val; // which contain the converted value which will be returned
+	SET_BIT(ADCSRA,ADSC); // start the ADC conversion
+ 10e:	36 9a       	sbi	0x06, 6	; 6
+	while(IS_BIT_CLR(ADCSRA,ADIF));//stay in your position till ADIF become 1 when conversion complete
+ 110:	34 9b       	sbis	0x06, 4	; 6
+ 112:	fe cf       	rjmp	.-4      	; 0x110 <ADC_u16Read+0x2>
+	SET_BIT(ADCSRA,ADIF); // clear ADIF
+ 114:	34 9a       	sbi	0x06, 4	; 6
+	read_val=(ADCL); //reas the ADCL register
+ 116:	84 b1       	in	r24, 0x04	; 4
+	read_val|=(ADCH<<8);//read the whole register
+ 118:	25 b1       	in	r18, 0x05	; 5
+	return read_val ; // return the converted value
+ 11a:	90 e0       	ldi	r25, 0x00	; 0
+ 11c:	92 2b       	or	r25, r18
+ 11e:	08 95       	ret
+
+00000120 <DIO_vsetPINDir>:
+#include <avr/io.h>
+#include "std_macros.h"
+#include "DIO.h"
+void DIO_vsetPINDir(uint8 portname,uint8 pinnumber,uint8 direction)
+{
+	switch(portname)
+ 120:	82 34       	cpi	r24, 0x42	; 66
+ 122:	19 f1       	breq	.+70     	; 0x16a <DIO_vsetPINDir+0x4a>
+ 124:	18 f4       	brcc	.+6      	; 0x12c <DIO_vsetPINDir+0xc>
+ 126:	81 34       	cpi	r24, 0x41	; 65
+ 128:	39 f0       	breq	.+14     	; 0x138 <DIO_vsetPINDir+0x18>
+ 12a:	08 95       	ret
+ 12c:	83 34       	cpi	r24, 0x43	; 67
+ 12e:	b1 f1       	breq	.+108    	; 0x19c <DIO_vsetPINDir+0x7c>
+ 130:	84 34       	cpi	r24, 0x44	; 68
+ 132:	09 f4       	brne	.+2      	; 0x136 <DIO_vsetPINDir+0x16>
+ 134:	4c c0       	rjmp	.+152    	; 0x1ce <DIO_vsetPINDir+0xae>
+ 136:	08 95       	ret
+	{
+		
+		
+		case 'A':
+		if(direction==1)
+ 138:	41 30       	cpi	r20, 0x01	; 1
+ 13a:	59 f4       	brne	.+22     	; 0x152 <DIO_vsetPINDir+0x32>
+		{
+			SET_BIT(DDRA,pinnumber);//Set the direction of the given pin in port A as output
+ 13c:	2a b3       	in	r18, 0x1a	; 26
+ 13e:	81 e0       	ldi	r24, 0x01	; 1
+ 140:	90 e0       	ldi	r25, 0x00	; 0
+ 142:	02 c0       	rjmp	.+4      	; 0x148 <DIO_vsetPINDir+0x28>
+ 144:	88 0f       	add	r24, r24
+ 146:	99 1f       	adc	r25, r25
+ 148:	6a 95       	dec	r22
+ 14a:	e2 f7       	brpl	.-8      	; 0x144 <DIO_vsetPINDir+0x24>
+ 14c:	82 2b       	or	r24, r18
+ 14e:	8a bb       	out	0x1a, r24	; 26
+ 150:	08 95       	ret
+		}
+		else
+		{
+			CLR_BIT(DDRA,pinnumber);//Set the direction of the given pin in port A as input
+ 152:	2a b3       	in	r18, 0x1a	; 26
+ 154:	81 e0       	ldi	r24, 0x01	; 1
+ 156:	90 e0       	ldi	r25, 0x00	; 0
+ 158:	02 c0       	rjmp	.+4      	; 0x15e <DIO_vsetPINDir+0x3e>
+ 15a:	88 0f       	add	r24, r24
+ 15c:	99 1f       	adc	r25, r25
+ 15e:	6a 95       	dec	r22
+ 160:	e2 f7       	brpl	.-8      	; 0x15a <DIO_vsetPINDir+0x3a>
+ 162:	80 95       	com	r24
+ 164:	82 23       	and	r24, r18
+ 166:	8a bb       	out	0x1a, r24	; 26
+ 168:	08 95       	ret
+		}
+		break;
+		case 'B':
+		if(direction==1)
+ 16a:	41 30       	cpi	r20, 0x01	; 1
+ 16c:	59 f4       	brne	.+22     	; 0x184 <DIO_vsetPINDir+0x64>
+		{
+			SET_BIT(DDRB,pinnumber);//Set the direction of the given pin in port B as output
+ 16e:	27 b3       	in	r18, 0x17	; 23
+ 170:	81 e0       	ldi	r24, 0x01	; 1
+ 172:	90 e0       	ldi	r25, 0x00	; 0
+ 174:	02 c0       	rjmp	.+4      	; 0x17a <DIO_vsetPINDir+0x5a>
+ 176:	88 0f       	add	r24, r24
+ 178:	99 1f       	adc	r25, r25
+ 17a:	6a 95       	dec	r22
+ 17c:	e2 f7       	brpl	.-8      	; 0x176 <DIO_vsetPINDir+0x56>
+ 17e:	82 2b       	or	r24, r18
+ 180:	87 bb       	out	0x17, r24	; 23
+ 182:	08 95       	ret
+		}
+		else
+		{
+			CLR_BIT(DDRB,pinnumber);//Set the direction of the given pin in port B as input
+ 184:	27 b3       	in	r18, 0x17	; 23
+ 186:	81 e0       	ldi	r24, 0x01	; 1
+ 188:	90 e0       	ldi	r25, 0x00	; 0
+ 18a:	02 c0       	rjmp	.+4      	; 0x190 <DIO_vsetPINDir+0x70>
+ 18c:	88 0f       	add	r24, r24
+ 18e:	99 1f       	adc	r25, r25
+ 190:	6a 95       	dec	r22
+ 192:	e2 f7       	brpl	.-8      	; 0x18c <DIO_vsetPINDir+0x6c>
+ 194:	80 95       	com	r24
+ 196:	82 23       	and	r24, r18
+ 198:	87 bb       	out	0x17, r24	; 23
+ 19a:	08 95       	ret
+		}
+		break;
+		case 'C':
+		if(direction==1)
+ 19c:	41 30       	cpi	r20, 0x01	; 1
+ 19e:	59 f4       	brne	.+22     	; 0x1b6 <DIO_vsetPINDir+0x96>
+		{
+			SET_BIT(DDRC,pinnumber);//Set the direction of the given pin in port C as output
+ 1a0:	24 b3       	in	r18, 0x14	; 20
+ 1a2:	81 e0       	ldi	r24, 0x01	; 1
+ 1a4:	90 e0       	ldi	r25, 0x00	; 0
+ 1a6:	02 c0       	rjmp	.+4      	; 0x1ac <DIO_vsetPINDir+0x8c>
+ 1a8:	88 0f       	add	r24, r24
+ 1aa:	99 1f       	adc	r25, r25
+ 1ac:	6a 95       	dec	r22
+ 1ae:	e2 f7       	brpl	.-8      	; 0x1a8 <DIO_vsetPINDir+0x88>
+ 1b0:	82 2b       	or	r24, r18
+ 1b2:	84 bb       	out	0x14, r24	; 20
+ 1b4:	08 95       	ret
+		}
+		else
+		{
+			CLR_BIT(DDRC,pinnumber);//Set the direction of the given pin in port C as input
+ 1b6:	24 b3       	in	r18, 0x14	; 20
+ 1b8:	81 e0       	ldi	r24, 0x01	; 1
+ 1ba:	90 e0       	ldi	r25, 0x00	; 0
+ 1bc:	02 c0       	rjmp	.+4      	; 0x1c2 <DIO_vsetPINDir+0xa2>
+ 1be:	88 0f       	add	r24, r24
+ 1c0:	99 1f       	adc	r25, r25
+ 1c2:	6a 95       	dec	r22
+ 1c4:	e2 f7       	brpl	.-8      	; 0x1be <DIO_vsetPINDir+0x9e>
+ 1c6:	80 95       	com	r24
+ 1c8:	82 23       	and	r24, r18
+ 1ca:	84 bb       	out	0x14, r24	; 20
+ 1cc:	08 95       	ret
+		}
+		break;
+		case 'D':
+		if(direction==1)
+ 1ce:	41 30       	cpi	r20, 0x01	; 1
+ 1d0:	59 f4       	brne	.+22     	; 0x1e8 <DIO_vsetPINDir+0xc8>
+		{
+			SET_BIT(DDRD,pinnumber);//Set the direction of the given pin in port D as output
+ 1d2:	21 b3       	in	r18, 0x11	; 17
+ 1d4:	81 e0       	ldi	r24, 0x01	; 1
+ 1d6:	90 e0       	ldi	r25, 0x00	; 0
+ 1d8:	02 c0       	rjmp	.+4      	; 0x1de <DIO_vsetPINDir+0xbe>
+ 1da:	88 0f       	add	r24, r24
+ 1dc:	99 1f       	adc	r25, r25
+ 1de:	6a 95       	dec	r22
+ 1e0:	e2 f7       	brpl	.-8      	; 0x1da <DIO_vsetPINDir+0xba>
+ 1e2:	82 2b       	or	r24, r18
+ 1e4:	81 bb       	out	0x11, r24	; 17
+ 1e6:	08 95       	ret
+		}
+		else
+		{
+			CLR_BIT(DDRD,pinnumber);//Set the direction of the given pin in port D as input
+ 1e8:	21 b3       	in	r18, 0x11	; 17
+ 1ea:	81 e0       	ldi	r24, 0x01	; 1
+ 1ec:	90 e0       	ldi	r25, 0x00	; 0
+ 1ee:	02 c0       	rjmp	.+4      	; 0x1f4 <DIO_vsetPINDir+0xd4>
+ 1f0:	88 0f       	add	r24, r24
+ 1f2:	99 1f       	adc	r25, r25
+ 1f4:	6a 95       	dec	r22
+ 1f6:	e2 f7       	brpl	.-8      	; 0x1f0 <DIO_vsetPINDir+0xd0>
+ 1f8:	80 95       	com	r24
+ 1fa:	82 23       	and	r24, r18
+ 1fc:	81 bb       	out	0x11, r24	; 17
+ 1fe:	08 95       	ret
+
+00000200 <DIO_write>:
+}
+
+
+void DIO_write(uint8 portname,uint8 pinnumber,uint8 outputvalue)
+{
+	switch(portname)
+ 200:	82 34       	cpi	r24, 0x42	; 66
+ 202:	19 f1       	breq	.+70     	; 0x24a <DIO_write+0x4a>
+ 204:	18 f4       	brcc	.+6      	; 0x20c <DIO_write+0xc>
+ 206:	81 34       	cpi	r24, 0x41	; 65
+ 208:	39 f0       	breq	.+14     	; 0x218 <DIO_write+0x18>
+ 20a:	08 95       	ret
+ 20c:	83 34       	cpi	r24, 0x43	; 67
+ 20e:	b1 f1       	breq	.+108    	; 0x27c <DIO_write+0x7c>
+ 210:	84 34       	cpi	r24, 0x44	; 68
+ 212:	09 f4       	brne	.+2      	; 0x216 <DIO_write+0x16>
+ 214:	4c c0       	rjmp	.+152    	; 0x2ae <DIO_write+0xae>
+ 216:	08 95       	ret
+	{
+		case 'A' :
+		
+		if(outputvalue==1)
+ 218:	41 30       	cpi	r20, 0x01	; 1
+ 21a:	59 f4       	brne	.+22     	; 0x232 <DIO_write+0x32>
+		{
+			SET_BIT(PORTA,pinnumber);//Set the value of the given pin in port A as High
+ 21c:	2b b3       	in	r18, 0x1b	; 27
+ 21e:	81 e0       	ldi	r24, 0x01	; 1
+ 220:	90 e0       	ldi	r25, 0x00	; 0
+ 222:	02 c0       	rjmp	.+4      	; 0x228 <DIO_write+0x28>
+ 224:	88 0f       	add	r24, r24
+ 226:	99 1f       	adc	r25, r25
+ 228:	6a 95       	dec	r22
+ 22a:	e2 f7       	brpl	.-8      	; 0x224 <DIO_write+0x24>
+ 22c:	82 2b       	or	r24, r18
+ 22e:	8b bb       	out	0x1b, r24	; 27
+ 230:	08 95       	ret
+		}
+		else
+		{
+			CLR_BIT(PORTA,pinnumber);//Set the value of the given pin in port A as Low
+ 232:	2b b3       	in	r18, 0x1b	; 27
+ 234:	81 e0       	ldi	r24, 0x01	; 1
+ 236:	90 e0       	ldi	r25, 0x00	; 0
+ 238:	02 c0       	rjmp	.+4      	; 0x23e <DIO_write+0x3e>
+ 23a:	88 0f       	add	r24, r24
+ 23c:	99 1f       	adc	r25, r25
+ 23e:	6a 95       	dec	r22
+ 240:	e2 f7       	brpl	.-8      	; 0x23a <DIO_write+0x3a>
+ 242:	80 95       	com	r24
+ 244:	82 23       	and	r24, r18
+ 246:	8b bb       	out	0x1b, r24	; 27
+ 248:	08 95       	ret
+		}
+		break ;
+		case 'B':
+		
+		if(outputvalue==1)
+ 24a:	41 30       	cpi	r20, 0x01	; 1
+ 24c:	59 f4       	brne	.+22     	; 0x264 <DIO_write+0x64>
+		{
+			SET_BIT(PORTB,pinnumber);//Set the value of the given pin in port B as High
+ 24e:	28 b3       	in	r18, 0x18	; 24
+ 250:	81 e0       	ldi	r24, 0x01	; 1
+ 252:	90 e0       	ldi	r25, 0x00	; 0
+ 254:	02 c0       	rjmp	.+4      	; 0x25a <DIO_write+0x5a>
+ 256:	88 0f       	add	r24, r24
+ 258:	99 1f       	adc	r25, r25
+ 25a:	6a 95       	dec	r22
+ 25c:	e2 f7       	brpl	.-8      	; 0x256 <DIO_write+0x56>
+ 25e:	82 2b       	or	r24, r18
+ 260:	88 bb       	out	0x18, r24	; 24
+ 262:	08 95       	ret
+		}
+		else
+		{
+			CLR_BIT(PORTB,pinnumber);//Set the value of the given pin in port B as Low
+ 264:	28 b3       	in	r18, 0x18	; 24
+ 266:	81 e0       	ldi	r24, 0x01	; 1
+ 268:	90 e0       	ldi	r25, 0x00	; 0
+ 26a:	02 c0       	rjmp	.+4      	; 0x270 <DIO_write+0x70>
+ 26c:	88 0f       	add	r24, r24
+ 26e:	99 1f       	adc	r25, r25
+ 270:	6a 95       	dec	r22
+ 272:	e2 f7       	brpl	.-8      	; 0x26c <DIO_write+0x6c>
+ 274:	80 95       	com	r24
+ 276:	82 23       	and	r24, r18
+ 278:	88 bb       	out	0x18, r24	; 24
+ 27a:	08 95       	ret
+		}
+		break ;
+		case 'C' :
+		
+		if(outputvalue==1)
+ 27c:	41 30       	cpi	r20, 0x01	; 1
+ 27e:	59 f4       	brne	.+22     	; 0x296 <DIO_write+0x96>
+		{
+			SET_BIT(PORTC,pinnumber);//Set the value of the given pin in port C as High
+ 280:	25 b3       	in	r18, 0x15	; 21
+ 282:	81 e0       	ldi	r24, 0x01	; 1
+ 284:	90 e0       	ldi	r25, 0x00	; 0
+ 286:	02 c0       	rjmp	.+4      	; 0x28c <DIO_write+0x8c>
+ 288:	88 0f       	add	r24, r24
+ 28a:	99 1f       	adc	r25, r25
+ 28c:	6a 95       	dec	r22
+ 28e:	e2 f7       	brpl	.-8      	; 0x288 <DIO_write+0x88>
+ 290:	82 2b       	or	r24, r18
+ 292:	85 bb       	out	0x15, r24	; 21
+ 294:	08 95       	ret
+		}
+		else
+		{
+			CLR_BIT(PORTC,pinnumber);//Set the value of the given pin in port C as Low
+ 296:	25 b3       	in	r18, 0x15	; 21
+ 298:	81 e0       	ldi	r24, 0x01	; 1
+ 29a:	90 e0       	ldi	r25, 0x00	; 0
+ 29c:	02 c0       	rjmp	.+4      	; 0x2a2 <DIO_write+0xa2>
+ 29e:	88 0f       	add	r24, r24
+ 2a0:	99 1f       	adc	r25, r25
+ 2a2:	6a 95       	dec	r22
+ 2a4:	e2 f7       	brpl	.-8      	; 0x29e <DIO_write+0x9e>
+ 2a6:	80 95       	com	r24
+ 2a8:	82 23       	and	r24, r18
+ 2aa:	85 bb       	out	0x15, r24	; 21
+ 2ac:	08 95       	ret
+		}
+		break ;
+		case 'D':
+		
+		if(outputvalue==1)
+ 2ae:	41 30       	cpi	r20, 0x01	; 1
+ 2b0:	59 f4       	brne	.+22     	; 0x2c8 <DIO_write+0xc8>
+		{
+			SET_BIT(PORTD,pinnumber);//Set the value of the given pin in port D as High
+ 2b2:	22 b3       	in	r18, 0x12	; 18
+ 2b4:	81 e0       	ldi	r24, 0x01	; 1
+ 2b6:	90 e0       	ldi	r25, 0x00	; 0
+ 2b8:	02 c0       	rjmp	.+4      	; 0x2be <DIO_write+0xbe>
+ 2ba:	88 0f       	add	r24, r24
+ 2bc:	99 1f       	adc	r25, r25
+ 2be:	6a 95       	dec	r22
+ 2c0:	e2 f7       	brpl	.-8      	; 0x2ba <DIO_write+0xba>
+ 2c2:	82 2b       	or	r24, r18
+ 2c4:	82 bb       	out	0x12, r24	; 18
+ 2c6:	08 95       	ret
+		}
+		else
+		{
+			CLR_BIT(PORTD,pinnumber);//Set the value of the given pin in port D as Low
+ 2c8:	22 b3       	in	r18, 0x12	; 18
+ 2ca:	81 e0       	ldi	r24, 0x01	; 1
+ 2cc:	90 e0       	ldi	r25, 0x00	; 0
+ 2ce:	02 c0       	rjmp	.+4      	; 0x2d4 <DIO_write+0xd4>
+ 2d0:	88 0f       	add	r24, r24
+ 2d2:	99 1f       	adc	r25, r25
+ 2d4:	6a 95       	dec	r22
+ 2d6:	e2 f7       	brpl	.-8      	; 0x2d0 <DIO_write+0xd0>
+ 2d8:	80 95       	com	r24
+ 2da:	82 23       	and	r24, r18
+ 2dc:	82 bb       	out	0x12, r24	; 18
+ 2de:	08 95       	ret
+
+000002e0 <DIO_u8read>:
+
+
+uint8 DIO_u8read(uint8 portname,uint8 pinnumber)
+{
+	uint8 return_value=0;
+	switch(portname)
+ 2e0:	82 34       	cpi	r24, 0x42	; 66
+ 2e2:	d9 f0       	breq	.+54     	; 0x31a <DIO_u8read+0x3a>
+ 2e4:	18 f4       	brcc	.+6      	; 0x2ec <DIO_u8read+0xc>
+ 2e6:	81 34       	cpi	r24, 0x41	; 65
+ 2e8:	31 f0       	breq	.+12     	; 0x2f6 <DIO_u8read+0x16>
+ 2ea:	4d c0       	rjmp	.+154    	; 0x386 <DIO_u8read+0xa6>
+ 2ec:	83 34       	cpi	r24, 0x43	; 67
+ 2ee:	39 f1       	breq	.+78     	; 0x33e <DIO_u8read+0x5e>
+ 2f0:	84 34       	cpi	r24, 0x44	; 68
+ 2f2:	b9 f1       	breq	.+110    	; 0x362 <DIO_u8read+0x82>
+ 2f4:	48 c0       	rjmp	.+144    	; 0x386 <DIO_u8read+0xa6>
+	{
+		case 'A' :
+		return_value=Read_bIT(PINA,pinnumber);//Read the value from the given pin in port A
+ 2f6:	29 b3       	in	r18, 0x19	; 25
+ 2f8:	81 e0       	ldi	r24, 0x01	; 1
+ 2fa:	90 e0       	ldi	r25, 0x00	; 0
+ 2fc:	06 2e       	mov	r0, r22
+ 2fe:	02 c0       	rjmp	.+4      	; 0x304 <DIO_u8read+0x24>
+ 300:	88 0f       	add	r24, r24
+ 302:	99 1f       	adc	r25, r25
+ 304:	0a 94       	dec	r0
+ 306:	e2 f7       	brpl	.-8      	; 0x300 <DIO_u8read+0x20>
+ 308:	30 e0       	ldi	r19, 0x00	; 0
+ 30a:	82 23       	and	r24, r18
+ 30c:	93 23       	and	r25, r19
+ 30e:	02 c0       	rjmp	.+4      	; 0x314 <DIO_u8read+0x34>
+ 310:	95 95       	asr	r25
+ 312:	87 95       	ror	r24
+ 314:	6a 95       	dec	r22
+ 316:	e2 f7       	brpl	.-8      	; 0x310 <DIO_u8read+0x30>
+		break;
+ 318:	08 95       	ret
+		
+		case 'B' :
+		return_value=Read_bIT(PINB,pinnumber);//Read the value from the given pin in port B
+ 31a:	26 b3       	in	r18, 0x16	; 22
+ 31c:	81 e0       	ldi	r24, 0x01	; 1
+ 31e:	90 e0       	ldi	r25, 0x00	; 0
+ 320:	06 2e       	mov	r0, r22
+ 322:	02 c0       	rjmp	.+4      	; 0x328 <DIO_u8read+0x48>
+ 324:	88 0f       	add	r24, r24
+ 326:	99 1f       	adc	r25, r25
+ 328:	0a 94       	dec	r0
+ 32a:	e2 f7       	brpl	.-8      	; 0x324 <DIO_u8read+0x44>
+ 32c:	30 e0       	ldi	r19, 0x00	; 0
+ 32e:	82 23       	and	r24, r18
+ 330:	93 23       	and	r25, r19
+ 332:	02 c0       	rjmp	.+4      	; 0x338 <DIO_u8read+0x58>
+ 334:	95 95       	asr	r25
+ 336:	87 95       	ror	r24
+ 338:	6a 95       	dec	r22
+ 33a:	e2 f7       	brpl	.-8      	; 0x334 <DIO_u8read+0x54>
+		break;
+ 33c:	08 95       	ret
+		
+		case 'C' :
+		return_value=Read_bIT(PINC,pinnumber);//Read the value from the given pin in port C
+ 33e:	23 b3       	in	r18, 0x13	; 19
+ 340:	81 e0       	ldi	r24, 0x01	; 1
+ 342:	90 e0       	ldi	r25, 0x00	; 0
+ 344:	06 2e       	mov	r0, r22
+ 346:	02 c0       	rjmp	.+4      	; 0x34c <DIO_u8read+0x6c>
+ 348:	88 0f       	add	r24, r24
+ 34a:	99 1f       	adc	r25, r25
+ 34c:	0a 94       	dec	r0
+ 34e:	e2 f7       	brpl	.-8      	; 0x348 <DIO_u8read+0x68>
+ 350:	30 e0       	ldi	r19, 0x00	; 0
+ 352:	82 23       	and	r24, r18
+ 354:	93 23       	and	r25, r19
+ 356:	02 c0       	rjmp	.+4      	; 0x35c <DIO_u8read+0x7c>
+ 358:	95 95       	asr	r25
+ 35a:	87 95       	ror	r24
+ 35c:	6a 95       	dec	r22
+ 35e:	e2 f7       	brpl	.-8      	; 0x358 <DIO_u8read+0x78>
+		break;
+ 360:	08 95       	ret
+		
+		case 'D' :
+		return_value=Read_bIT(PIND,pinnumber);//Read the value from the given pin in port D
+ 362:	20 b3       	in	r18, 0x10	; 16
+ 364:	81 e0       	ldi	r24, 0x01	; 1
+ 366:	90 e0       	ldi	r25, 0x00	; 0
+ 368:	06 2e       	mov	r0, r22
+ 36a:	02 c0       	rjmp	.+4      	; 0x370 <DIO_u8read+0x90>
+ 36c:	88 0f       	add	r24, r24
+ 36e:	99 1f       	adc	r25, r25
+ 370:	0a 94       	dec	r0
+ 372:	e2 f7       	brpl	.-8      	; 0x36c <DIO_u8read+0x8c>
+ 374:	30 e0       	ldi	r19, 0x00	; 0
+ 376:	82 23       	and	r24, r18
+ 378:	93 23       	and	r25, r19
+ 37a:	02 c0       	rjmp	.+4      	; 0x380 <DIO_u8read+0xa0>
+ 37c:	95 95       	asr	r25
+ 37e:	87 95       	ror	r24
+ 380:	6a 95       	dec	r22
+ 382:	e2 f7       	brpl	.-8      	; 0x37c <DIO_u8read+0x9c>
+		break;
+ 384:	08 95       	ret
+}
+
+
+uint8 DIO_u8read(uint8 portname,uint8 pinnumber)
+{
+	uint8 return_value=0;
+ 386:	80 e0       	ldi	r24, 0x00	; 0
+		return_value=Read_bIT(PIND,pinnumber);//Read the value from the given pin in port D
+		break;
+		default: break;
+	}
+	return return_value ;
+}
+ 388:	08 95       	ret
+
+0000038a <LED_vInit>:
+{
+	DIO_write(portname,pinnumber,0);//Set the given pin in the given port to zero(off)
+}
+void LED_vToggle(uint8 portname,uint8 pinnumber)
+{
+	DIO_toggle(portname,pinnumber);//Set the given pin in the given port to zero if it is one or set it to one if it is zero
+ 38a:	41 e0       	ldi	r20, 0x01	; 1
+ 38c:	0e 94 90 00 	call	0x120	; 0x120 <DIO_vsetPINDir>
+ 390:	08 95       	ret
+
+00000392 <LED_vTurnOn>:
+ 392:	41 e0       	ldi	r20, 0x01	; 1
+ 394:	0e 94 00 01 	call	0x200	; 0x200 <DIO_write>
+ 398:	08 95       	ret
+
+0000039a <LED_vTurnOff>:
+ 39a:	40 e0       	ldi	r20, 0x00	; 0
+ 39c:	0e 94 00 01 	call	0x200	; 0x200 <DIO_write>
+ 3a0:	08 95       	ret
+
+000003a2 <LED_u8ReadStatus>:
+}
+uint8 LED_u8ReadStatus(uint8 portname,uint8 pinnumber)
+{
+	return DIO_u8read(portname,pinnumber);//return the current status of the given pin
+ 3a2:	0e 94 70 01 	call	0x2e0	; 0x2e0 <DIO_u8read>
+}
+ 3a6:	08 95       	ret
+
+000003a8 <main>:
+volatile uint8 last_air_conditioning_value=AIR_CONDTIONING_OFF; // last air conditioning value which will help in hysteresis
+signed char IR1,IR2 = 0 ;
+
+int main(void)
+{
+	ADC_vinit();//initialize the ADC of the micro controller
+ 3a8:	0e 94 81 00 	call	0x102	; 0x102 <ADC_vinit>
+	timer0_initializeCTC();//Initialize the timer zero of the micro controller
+ 3ac:	0e 94 89 03 	call	0x712	; 0x712 <timer0_initializeCTC>
+	SPI_vInitSlave();//initialize the SPI as a slave
+ 3b0:	0e 94 81 03 	call	0x702	; 0x702 <SPI_vInitSlave>
+	
+	/* initialization of output pins of connected leds or devices */
+	LED_vInit(AIR_COND_PORT,AIR_COND_PIN);
+ 3b4:	62 e0       	ldi	r22, 0x02	; 2
+ 3b6:	84 e4       	ldi	r24, 0x44	; 68
+ 3b8:	0e 94 c5 01 	call	0x38a	; 0x38a <LED_vInit>
+	LED_vInit(TV_PORT,TV_PIN);
+ 3bc:	63 e0       	ldi	r22, 0x03	; 3
+ 3be:	84 e4       	ldi	r24, 0x44	; 68
+ 3c0:	0e 94 c5 01 	call	0x38a	; 0x38a <LED_vInit>
+	LED_vInit(DOOR_PORT,DOOR_PIN);
+ 3c4:	60 e0       	ldi	r22, 0x00	; 0
+ 3c6:	83 e4       	ldi	r24, 0x43	; 67
+ 3c8:	0e 94 c5 01 	call	0x38a	; 0x38a <LED_vInit>
+	LED_vInit(ROOM1_PORT,ROOM1_PIN);
+ 3cc:	64 e0       	ldi	r22, 0x04	; 4
+ 3ce:	84 e4       	ldi	r24, 0x44	; 68
+ 3d0:	0e 94 c5 01 	call	0x38a	; 0x38a <LED_vInit>
+	LED_vInit(ROOM2_PORT,ROOM2_PIN);
+ 3d4:	65 e0       	ldi	r22, 0x05	; 5
+ 3d6:	84 e4       	ldi	r24, 0x44	; 68
+ 3d8:	0e 94 c5 01 	call	0x38a	; 0x38a <LED_vInit>
+	LED_vInit(ROOM3_PORT,ROOM3_PIN);
+ 3dc:	66 e0       	ldi	r22, 0x06	; 6
+ 3de:	84 e4       	ldi	r24, 0x44	; 68
+ 3e0:	0e 94 c5 01 	call	0x38a	; 0x38a <LED_vInit>
+	LED_vInit(ROOM4_PORT,ROOM4_PIN);
+ 3e4:	67 e0       	ldi	r22, 0x07	; 7
+ 3e6:	84 e4       	ldi	r24, 0x44	; 68
+ 3e8:	0e 94 c5 01 	call	0x38a	; 0x38a <LED_vInit>
+	LED_vInit(ROOM5_PORT,ROOM5_PIN);
+ 3ec:	61 e0       	ldi	r22, 0x01	; 1
+ 3ee:	84 e4       	ldi	r24, 0x44	; 68
+ 3f0:	0e 94 c5 01 	call	0x38a	; 0x38a <LED_vInit>
+	
+	uint8 request = DEFAULT_ACK;//the value that is received from the master
+	uint8 response = DEFAULT_ACK;//the values that is sent back to the master
+ 3f4:	cf ef       	ldi	r28, 0xFF	; 255
+	
+	while(1)
+	{
+		request = SPI_ui8TransmitRecive(DEFAULT_ACK);//wait for the master to start the transmitting
+ 3f6:	8f ef       	ldi	r24, 0xFF	; 255
+ 3f8:	0e 94 84 03 	call	0x708	; 0x708 <SPI_ui8TransmitRecive>
+		//ALL Messages are defined in STD_messages.h
+		switch (request)
+ 3fc:	90 e0       	ldi	r25, 0x00	; 0
+ 3fe:	fc 01       	movw	r30, r24
+ 400:	39 97       	sbiw	r30, 0x09	; 9
+ 402:	e8 33       	cpi	r30, 0x38	; 56
+ 404:	f1 05       	cpc	r31, r1
+ 406:	b8 f7       	brcc	.-18     	; 0x3f6 <main+0x4e>
+ 408:	e6 5d       	subi	r30, 0xD6	; 214
+ 40a:	ff 4f       	sbci	r31, 0xFF	; 255
+ 40c:	0c 94 d3 04 	jmp	0x9a6	; 0x9a6 <__tablejump2__>
+		{
+			/*********************************   STATUS COMMANDS ********************************/
+			//commands related to send the current status back to the master
+			case DOOR_STATUS:
+			if (LED_u8ReadStatus(DOOR_PORT,DOOR_PIN)==0)//if the led is turned off
+ 410:	60 e0       	ldi	r22, 0x00	; 0
+ 412:	83 e4       	ldi	r24, 0x43	; 67
+ 414:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <LED_u8ReadStatus>
+ 418:	88 23       	and	r24, r24
+ 41a:	41 f0       	breq	.+16     	; 0x42c <__EEPROM_REGION_LENGTH__+0x2c>
+			{
+				response = OFF_STATUS;//set the response as off status
+			}
+			else if (LED_u8ReadStatus(DOOR_PORT,DOOR_PIN)==1)//if the led is turned on
+ 41c:	60 e0       	ldi	r22, 0x00	; 0
+ 41e:	83 e4       	ldi	r24, 0x43	; 67
+ 420:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <LED_u8ReadStatus>
+ 424:	81 30       	cpi	r24, 0x01	; 1
+ 426:	19 f4       	brne	.+6      	; 0x42e <__EEPROM_REGION_LENGTH__+0x2e>
+			{
+				response = ON_STATUS;//set the response as on status
+ 428:	c1 e0       	ldi	r28, 0x01	; 1
+ 42a:	01 c0       	rjmp	.+2      	; 0x42e <__EEPROM_REGION_LENGTH__+0x2e>
+			/*********************************   STATUS COMMANDS ********************************/
+			//commands related to send the current status back to the master
+			case DOOR_STATUS:
+			if (LED_u8ReadStatus(DOOR_PORT,DOOR_PIN)==0)//if the led is turned off
+			{
+				response = OFF_STATUS;//set the response as off status
+ 42c:	c0 e0       	ldi	r28, 0x00	; 0
+				response = ON_STATUS;//set the response as on status
+			}
+			else
+			{
+			}
+			SPI_ui8TransmitRecive(response);//response to the transmitter with the status
+ 42e:	8c 2f       	mov	r24, r28
+ 430:	0e 94 84 03 	call	0x708	; 0x708 <SPI_ui8TransmitRecive>
+			break;//break the switch case
+ 434:	e0 cf       	rjmp	.-64     	; 0x3f6 <main+0x4e>
+	
+			case ROOM1_STATUS:
+			if (LED_u8ReadStatus(ROOM1_PORT,ROOM1_PIN)==0)//if the led is turned off
+ 436:	64 e0       	ldi	r22, 0x04	; 4
+ 438:	84 e4       	ldi	r24, 0x44	; 68
+ 43a:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <LED_u8ReadStatus>
+ 43e:	88 23       	and	r24, r24
+ 440:	41 f0       	breq	.+16     	; 0x452 <__EEPROM_REGION_LENGTH__+0x52>
+			{
+				response = OFF_STATUS;//set the response as off status
+			}
+			else if (LED_u8ReadStatus(ROOM1_PORT,ROOM1_PIN)==1)//if the led is turned on
+ 442:	64 e0       	ldi	r22, 0x04	; 4
+ 444:	84 e4       	ldi	r24, 0x44	; 68
+ 446:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <LED_u8ReadStatus>
+ 44a:	81 30       	cpi	r24, 0x01	; 1
+ 44c:	19 f4       	brne	.+6      	; 0x454 <__EEPROM_REGION_LENGTH__+0x54>
+			{
+				response = ON_STATUS;//set the response as on status
+ 44e:	c1 e0       	ldi	r28, 0x01	; 1
+ 450:	01 c0       	rjmp	.+2      	; 0x454 <__EEPROM_REGION_LENGTH__+0x54>
+			break;//break the switch case
+	
+			case ROOM1_STATUS:
+			if (LED_u8ReadStatus(ROOM1_PORT,ROOM1_PIN)==0)//if the led is turned off
+			{
+				response = OFF_STATUS;//set the response as off status
+ 452:	c0 e0       	ldi	r28, 0x00	; 0
+				response = ON_STATUS;//set the response as on status
+			}
+			else
+			{
+			}
+			SPI_ui8TransmitRecive(response);//response to the transmitter with the status
+ 454:	8c 2f       	mov	r24, r28
+ 456:	0e 94 84 03 	call	0x708	; 0x708 <SPI_ui8TransmitRecive>
+			break;//break the switch case
+ 45a:	cd cf       	rjmp	.-102    	; 0x3f6 <main+0x4e>
+			
+			case ROOM2_STATUS:
+			if (LED_u8ReadStatus(ROOM2_PORT,ROOM2_PIN)==0)//if the led is turned off
+ 45c:	65 e0       	ldi	r22, 0x05	; 5
+ 45e:	84 e4       	ldi	r24, 0x44	; 68
+ 460:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <LED_u8ReadStatus>
+ 464:	88 23       	and	r24, r24
+ 466:	41 f0       	breq	.+16     	; 0x478 <__EEPROM_REGION_LENGTH__+0x78>
+			{
+				response = OFF_STATUS;//set the response as off status
+			}
+			else if (LED_u8ReadStatus(ROOM2_PORT,ROOM2_PIN)==1)//if the led is turned on
+ 468:	65 e0       	ldi	r22, 0x05	; 5
+ 46a:	84 e4       	ldi	r24, 0x44	; 68
+ 46c:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <LED_u8ReadStatus>
+ 470:	81 30       	cpi	r24, 0x01	; 1
+ 472:	19 f4       	brne	.+6      	; 0x47a <__EEPROM_REGION_LENGTH__+0x7a>
+			{
+				response = ON_STATUS;//set the response as on status
+ 474:	c1 e0       	ldi	r28, 0x01	; 1
+ 476:	01 c0       	rjmp	.+2      	; 0x47a <__EEPROM_REGION_LENGTH__+0x7a>
+			break;//break the switch case
+			
+			case ROOM2_STATUS:
+			if (LED_u8ReadStatus(ROOM2_PORT,ROOM2_PIN)==0)//if the led is turned off
+			{
+				response = OFF_STATUS;//set the response as off status
+ 478:	c0 e0       	ldi	r28, 0x00	; 0
+				response = ON_STATUS;//set the response as on status
+			}
+			else
+			{
+			}
+			SPI_ui8TransmitRecive(response);//response to the transmitter with the status
+ 47a:	8c 2f       	mov	r24, r28
+ 47c:	0e 94 84 03 	call	0x708	; 0x708 <SPI_ui8TransmitRecive>
+			break;//break the switch case
+ 480:	ba cf       	rjmp	.-140    	; 0x3f6 <main+0x4e>
+			
+			case ROOM3_STATUS:
+			if (LED_u8ReadStatus(ROOM3_PORT,ROOM3_PIN)==0)//if the led is turned off
+ 482:	66 e0       	ldi	r22, 0x06	; 6
+ 484:	84 e4       	ldi	r24, 0x44	; 68
+ 486:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <LED_u8ReadStatus>
+ 48a:	88 23       	and	r24, r24
+ 48c:	41 f0       	breq	.+16     	; 0x49e <__EEPROM_REGION_LENGTH__+0x9e>
+			{
+				response = OFF_STATUS;//set the response as off status
+			}
+			else if (LED_u8ReadStatus(ROOM3_PORT,ROOM3_PIN)==1)//if the led is turned on
+ 48e:	66 e0       	ldi	r22, 0x06	; 6
+ 490:	84 e4       	ldi	r24, 0x44	; 68
+ 492:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <LED_u8ReadStatus>
+ 496:	81 30       	cpi	r24, 0x01	; 1
+ 498:	19 f4       	brne	.+6      	; 0x4a0 <__EEPROM_REGION_LENGTH__+0xa0>
+			{
+				response = ON_STATUS;//set the response as on status
+ 49a:	c1 e0       	ldi	r28, 0x01	; 1
+ 49c:	01 c0       	rjmp	.+2      	; 0x4a0 <__EEPROM_REGION_LENGTH__+0xa0>
+			break;//break the switch case
+			
+			case ROOM3_STATUS:
+			if (LED_u8ReadStatus(ROOM3_PORT,ROOM3_PIN)==0)//if the led is turned off
+			{
+				response = OFF_STATUS;//set the response as off status
+ 49e:	c0 e0       	ldi	r28, 0x00	; 0
+				response = ON_STATUS;//set the response as on status
+			}
+			else
+			{
+			}
+			SPI_ui8TransmitRecive(response);//response to the transmitter with the status
+ 4a0:	8c 2f       	mov	r24, r28
+ 4a2:	0e 94 84 03 	call	0x708	; 0x708 <SPI_ui8TransmitRecive>
+			break;//break the switch case
+ 4a6:	a7 cf       	rjmp	.-178    	; 0x3f6 <main+0x4e>
+			
+			case ROOM4_STATUS:
+			if (LED_u8ReadStatus(ROOM4_PORT,ROOM4_PIN)==0)//if the led is turned off
+ 4a8:	67 e0       	ldi	r22, 0x07	; 7
+ 4aa:	84 e4       	ldi	r24, 0x44	; 68
+ 4ac:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <LED_u8ReadStatus>
+ 4b0:	88 23       	and	r24, r24
+ 4b2:	41 f0       	breq	.+16     	; 0x4c4 <__EEPROM_REGION_LENGTH__+0xc4>
+			{
+				response = OFF_STATUS;//set the response as off status
+			}
+			else if (LED_u8ReadStatus(ROOM4_PORT,ROOM4_PIN)==1)//if the led is turned on
+ 4b4:	67 e0       	ldi	r22, 0x07	; 7
+ 4b6:	84 e4       	ldi	r24, 0x44	; 68
+ 4b8:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <LED_u8ReadStatus>
+ 4bc:	81 30       	cpi	r24, 0x01	; 1
+ 4be:	19 f4       	brne	.+6      	; 0x4c6 <__EEPROM_REGION_LENGTH__+0xc6>
+			{
+				response = ON_STATUS;//set the response as on status
+ 4c0:	c1 e0       	ldi	r28, 0x01	; 1
+ 4c2:	01 c0       	rjmp	.+2      	; 0x4c6 <__EEPROM_REGION_LENGTH__+0xc6>
+			break;//break the switch case
+			
+			case ROOM4_STATUS:
+			if (LED_u8ReadStatus(ROOM4_PORT,ROOM4_PIN)==0)//if the led is turned off
+			{
+				response = OFF_STATUS;//set the response as off status
+ 4c4:	c0 e0       	ldi	r28, 0x00	; 0
+				response = ON_STATUS;//set the response as on status
+			}
+			else
+			{
+			}
+			SPI_ui8TransmitRecive(response);//response to the transmitter with the status
+ 4c6:	8c 2f       	mov	r24, r28
+ 4c8:	0e 94 84 03 	call	0x708	; 0x708 <SPI_ui8TransmitRecive>
+			break;//break the switch case
+ 4cc:	94 cf       	rjmp	.-216    	; 0x3f6 <main+0x4e>
+			
+			case ROOM5_STATUS:
+			if (LED_u8ReadStatus(ROOM5_PORT,ROOM5_PIN)==0)//if the led is turned off
+ 4ce:	61 e0       	ldi	r22, 0x01	; 1
+ 4d0:	84 e4       	ldi	r24, 0x44	; 68
+ 4d2:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <LED_u8ReadStatus>
+ 4d6:	88 23       	and	r24, r24
+ 4d8:	41 f0       	breq	.+16     	; 0x4ea <__EEPROM_REGION_LENGTH__+0xea>
+			{
+				response = OFF_STATUS;//set the response as off status
+			}
+			else if (LED_u8ReadStatus(ROOM5_PORT,ROOM5_PIN)==1)//if the led is turned on
+ 4da:	61 e0       	ldi	r22, 0x01	; 1
+ 4dc:	84 e4       	ldi	r24, 0x44	; 68
+ 4de:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <LED_u8ReadStatus>
+ 4e2:	81 30       	cpi	r24, 0x01	; 1
+ 4e4:	19 f4       	brne	.+6      	; 0x4ec <__EEPROM_REGION_LENGTH__+0xec>
+			{
+				response = ON_STATUS;//set the response as on status
+ 4e6:	c1 e0       	ldi	r28, 0x01	; 1
+ 4e8:	01 c0       	rjmp	.+2      	; 0x4ec <__EEPROM_REGION_LENGTH__+0xec>
+			break;//break the switch case
+			
+			case ROOM5_STATUS:
+			if (LED_u8ReadStatus(ROOM5_PORT,ROOM5_PIN)==0)//if the led is turned off
+			{
+				response = OFF_STATUS;//set the response as off status
+ 4ea:	c0 e0       	ldi	r28, 0x00	; 0
+				response = ON_STATUS;//set the response as on status
+			}
+			else
+			{
+			}
+			SPI_ui8TransmitRecive(response);//response to the transmitter with the status
+ 4ec:	8c 2f       	mov	r24, r28
+ 4ee:	0e 94 84 03 	call	0x708	; 0x708 <SPI_ui8TransmitRecive>
+			break;//break the switch case
+ 4f2:	81 cf       	rjmp	.-254    	; 0x3f6 <main+0x4e>
+			
+			case AIR_COND_STATUS:
+			if (LED_u8ReadStatus(AIR_COND_PORT,AIR_COND_PIN)==0)//if the led is turned off
+ 4f4:	62 e0       	ldi	r22, 0x02	; 2
+ 4f6:	84 e4       	ldi	r24, 0x44	; 68
+ 4f8:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <LED_u8ReadStatus>
+ 4fc:	88 23       	and	r24, r24
+ 4fe:	41 f0       	breq	.+16     	; 0x510 <__EEPROM_REGION_LENGTH__+0x110>
+			{
+				response = OFF_STATUS;//set the response as off status
+			}
+			else if (LED_u8ReadStatus(AIR_COND_PORT,AIR_COND_PIN)==1)//if the led is turned on
+ 500:	62 e0       	ldi	r22, 0x02	; 2
+ 502:	84 e4       	ldi	r24, 0x44	; 68
+ 504:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <LED_u8ReadStatus>
+ 508:	81 30       	cpi	r24, 0x01	; 1
+ 50a:	19 f4       	brne	.+6      	; 0x512 <__EEPROM_REGION_LENGTH__+0x112>
+			{
+				response = ON_STATUS;//set the response as on status
+ 50c:	c1 e0       	ldi	r28, 0x01	; 1
+ 50e:	01 c0       	rjmp	.+2      	; 0x512 <__EEPROM_REGION_LENGTH__+0x112>
+			break;//break the switch case
+			
+			case AIR_COND_STATUS:
+			if (LED_u8ReadStatus(AIR_COND_PORT,AIR_COND_PIN)==0)//if the led is turned off
+			{
+				response = OFF_STATUS;//set the response as off status
+ 510:	c0 e0       	ldi	r28, 0x00	; 0
+				response = ON_STATUS;//set the response as on status
+			}
+			else
+			{
+			}
+			SPI_ui8TransmitRecive(response);//response to the transmitter with the status
+ 512:	8c 2f       	mov	r24, r28
+ 514:	0e 94 84 03 	call	0x708	; 0x708 <SPI_ui8TransmitRecive>
+			break;//break the switch case
+ 518:	6e cf       	rjmp	.-292    	; 0x3f6 <main+0x4e>
+			
+			case TV_STATUS:
+			if (LED_u8ReadStatus(TV_PORT,TV_PIN)==0)//if the led is turned off
+ 51a:	63 e0       	ldi	r22, 0x03	; 3
+ 51c:	84 e4       	ldi	r24, 0x44	; 68
+ 51e:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <LED_u8ReadStatus>
+ 522:	88 23       	and	r24, r24
+ 524:	41 f0       	breq	.+16     	; 0x536 <__EEPROM_REGION_LENGTH__+0x136>
+			{
+				response = OFF_STATUS;//set the response as off status
+			}
+			else if (LED_u8ReadStatus(TV_PORT,TV_PIN)==1)//if the led is turned on
+ 526:	63 e0       	ldi	r22, 0x03	; 3
+ 528:	84 e4       	ldi	r24, 0x44	; 68
+ 52a:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <LED_u8ReadStatus>
+ 52e:	81 30       	cpi	r24, 0x01	; 1
+ 530:	19 f4       	brne	.+6      	; 0x538 <__EEPROM_REGION_LENGTH__+0x138>
+			{
+				response = ON_STATUS;//set the response as on status
+ 532:	c1 e0       	ldi	r28, 0x01	; 1
+ 534:	01 c0       	rjmp	.+2      	; 0x538 <__EEPROM_REGION_LENGTH__+0x138>
+			break;//break the switch case
+			
+			case TV_STATUS:
+			if (LED_u8ReadStatus(TV_PORT,TV_PIN)==0)//if the led is turned off
+			{
+				response = OFF_STATUS;//set the response as off status
+ 536:	c0 e0       	ldi	r28, 0x00	; 0
+				response = ON_STATUS;//set the response as on status
+			}
+			else
+			{
+			}
+			SPI_ui8TransmitRecive(response);//response to the transmitter with the status
+ 538:	8c 2f       	mov	r24, r28
+ 53a:	0e 94 84 03 	call	0x708	; 0x708 <SPI_ui8TransmitRecive>
+			break;//break the switch case
+ 53e:	5b cf       	rjmp	.-330    	; 0x3f6 <main+0x4e>
+			
+			/*********************************   TURN ON COMMANDS ********************************/
+			case DOOR_OPEN:
+			LED_vTurnOn(DOOR_PORT,DOOR_PIN);
+ 540:	60 e0       	ldi	r22, 0x00	; 0
+ 542:	83 e4       	ldi	r24, 0x43	; 67
+ 544:	0e 94 c9 01 	call	0x392	; 0x392 <LED_vTurnOn>
+			break;//break the switch case
+ 548:	56 cf       	rjmp	.-340    	; 0x3f6 <main+0x4e>
+			case ROOM1_TURN_ON:
+			LED_vTurnOn(ROOM1_PORT,ROOM1_PIN);//turn on the led of room 1
+ 54a:	64 e0       	ldi	r22, 0x04	; 4
+ 54c:	84 e4       	ldi	r24, 0x44	; 68
+ 54e:	0e 94 c9 01 	call	0x392	; 0x392 <LED_vTurnOn>
+			break;//break the switch case
+ 552:	51 cf       	rjmp	.-350    	; 0x3f6 <main+0x4e>
+			case ROOM2_TURN_ON:
+			LED_vTurnOn(ROOM1_PORT,ROOM2_PIN);//turn on the led of room 2
+ 554:	65 e0       	ldi	r22, 0x05	; 5
+ 556:	84 e4       	ldi	r24, 0x44	; 68
+ 558:	0e 94 c9 01 	call	0x392	; 0x392 <LED_vTurnOn>
+			break;//break the switch case
+ 55c:	4c cf       	rjmp	.-360    	; 0x3f6 <main+0x4e>
+			case ROOM3_TURN_ON:
+			LED_vTurnOn(ROOM3_PORT,ROOM3_PIN);//turn on the led of room 3
+ 55e:	66 e0       	ldi	r22, 0x06	; 6
+ 560:	84 e4       	ldi	r24, 0x44	; 68
+ 562:	0e 94 c9 01 	call	0x392	; 0x392 <LED_vTurnOn>
+			break;//break the switch case
+ 566:	47 cf       	rjmp	.-370    	; 0x3f6 <main+0x4e>
+			case ROOM4_TURN_ON:
+			LED_vTurnOn(ROOM4_PORT,ROOM4_PIN);//turn on the led of room 4
+ 568:	67 e0       	ldi	r22, 0x07	; 7
+ 56a:	84 e4       	ldi	r24, 0x44	; 68
+ 56c:	0e 94 c9 01 	call	0x392	; 0x392 <LED_vTurnOn>
+			break;//break the switch case
+ 570:	42 cf       	rjmp	.-380    	; 0x3f6 <main+0x4e>
+			case ROOM5_TURN_ON:
+			LED_vTurnOn(ROOM5_PORT,ROOM5_PIN);//turn on the led of room 5
+ 572:	61 e0       	ldi	r22, 0x01	; 1
+ 574:	84 e4       	ldi	r24, 0x44	; 68
+ 576:	0e 94 c9 01 	call	0x392	; 0x392 <LED_vTurnOn>
+			break;//break the switch case
+ 57a:	3d cf       	rjmp	.-390    	; 0x3f6 <main+0x4e>
+			case AIR_COND_TURN_ON:
+			timer0_initializeCTC();
+ 57c:	0e 94 89 03 	call	0x712	; 0x712 <timer0_initializeCTC>
+			LED_vTurnOn(AIR_COND_PORT,AIR_COND_PIN);//turn on the led of air conditioning
+ 580:	62 e0       	ldi	r22, 0x02	; 2
+ 582:	84 e4       	ldi	r24, 0x44	; 68
+ 584:	0e 94 c9 01 	call	0x392	; 0x392 <LED_vTurnOn>
+			break;//break the switch case
+ 588:	36 cf       	rjmp	.-404    	; 0x3f6 <main+0x4e>
+			case TV_TURN_ON:
+			LED_vTurnOn(TV_PORT,TV_PIN);//turn on the led of the TV
+ 58a:	63 e0       	ldi	r22, 0x03	; 3
+ 58c:	84 e4       	ldi	r24, 0x44	; 68
+ 58e:	0e 94 c9 01 	call	0x392	; 0x392 <LED_vTurnOn>
+			break;//break the switch case
+ 592:	31 cf       	rjmp	.-414    	; 0x3f6 <main+0x4e>
+			
+			/*********************************   TURN OFF COMMANDS ********************************/
+			case DOOR_CLOSED:
+			LED_vTurnOff(DOOR_PORT,DOOR_PIN);
+ 594:	60 e0       	ldi	r22, 0x00	; 0
+ 596:	83 e4       	ldi	r24, 0x43	; 67
+ 598:	0e 94 cd 01 	call	0x39a	; 0x39a <LED_vTurnOff>
+			break;//break the switch case
+ 59c:	2c cf       	rjmp	.-424    	; 0x3f6 <main+0x4e>
+			case ROOM1_TURN_OFF:
+			LED_vTurnOff(ROOM1_PORT,ROOM1_PIN);//turn off the led of room 1
+ 59e:	64 e0       	ldi	r22, 0x04	; 4
+ 5a0:	84 e4       	ldi	r24, 0x44	; 68
+ 5a2:	0e 94 cd 01 	call	0x39a	; 0x39a <LED_vTurnOff>
+			break;//break the switch case
+ 5a6:	27 cf       	rjmp	.-434    	; 0x3f6 <main+0x4e>
+			case ROOM2_TURN_OFF:
+			LED_vTurnOff(ROOM2_PORT,ROOM2_PIN);//turn off the led of room 2
+ 5a8:	65 e0       	ldi	r22, 0x05	; 5
+ 5aa:	84 e4       	ldi	r24, 0x44	; 68
+ 5ac:	0e 94 cd 01 	call	0x39a	; 0x39a <LED_vTurnOff>
+			break;//break the switch case
+ 5b0:	22 cf       	rjmp	.-444    	; 0x3f6 <main+0x4e>
+			case ROOM3_TURN_OFF:
+			LED_vTurnOff(ROOM3_PORT,ROOM3_PIN);//turn off the led of room 3
+ 5b2:	66 e0       	ldi	r22, 0x06	; 6
+ 5b4:	84 e4       	ldi	r24, 0x44	; 68
+ 5b6:	0e 94 cd 01 	call	0x39a	; 0x39a <LED_vTurnOff>
+			break;//break the switch case
+ 5ba:	1d cf       	rjmp	.-454    	; 0x3f6 <main+0x4e>
+			case ROOM4_TURN_OFF:
+			LED_vTurnOff(ROOM4_PORT,ROOM4_PIN);//turn off the led of room 4
+ 5bc:	67 e0       	ldi	r22, 0x07	; 7
+ 5be:	84 e4       	ldi	r24, 0x44	; 68
+ 5c0:	0e 94 cd 01 	call	0x39a	; 0x39a <LED_vTurnOff>
+			break;//break the switch case
+ 5c4:	18 cf       	rjmp	.-464    	; 0x3f6 <main+0x4e>
+			case ROOM5_TURN_OFF:
+			LED_vTurnOff(ROOM5_PORT,ROOM5_PIN);//turn off the led of room 5
+ 5c6:	61 e0       	ldi	r22, 0x01	; 1
+ 5c8:	84 e4       	ldi	r24, 0x44	; 68
+ 5ca:	0e 94 cd 01 	call	0x39a	; 0x39a <LED_vTurnOff>
+			break;//break the switch case
+ 5ce:	13 cf       	rjmp	.-474    	; 0x3f6 <main+0x4e>
+			case AIR_COND_TURN_OFF:
+			timer0_stop();
+ 5d0:	0e 94 9f 03 	call	0x73e	; 0x73e <timer0_stop>
+			LED_vTurnOff(AIR_COND_PORT,AIR_COND_PIN);//turn off the led of air conditioning
+ 5d4:	62 e0       	ldi	r22, 0x02	; 2
+ 5d6:	84 e4       	ldi	r24, 0x44	; 68
+ 5d8:	0e 94 cd 01 	call	0x39a	; 0x39a <LED_vTurnOff>
+			break;//break the switch case
+ 5dc:	0c cf       	rjmp	.-488    	; 0x3f6 <main+0x4e>
+			case TV_TURN_OFF:
+			LED_vTurnOff(TV_PORT,TV_PIN);//turn off the led of the TV
+ 5de:	63 e0       	ldi	r22, 0x03	; 3
+ 5e0:	84 e4       	ldi	r24, 0x44	; 68
+ 5e2:	0e 94 cd 01 	call	0x39a	; 0x39a <LED_vTurnOff>
+			break;//break the switch case
+ 5e6:	07 cf       	rjmp	.-498    	; 0x3f6 <main+0x4e>
+			
+			/*********************************   Set temperature   ********************************/
+			case SET_TEMPERATURE:
+			required_temperature = SPI_ui8TransmitRecive(DEFAULT_ACK);//get the temperature from the master and store the temperature in required temperature 
+ 5e8:	8f ef       	ldi	r24, 0xFF	; 255
+ 5ea:	0e 94 84 03 	call	0x708	; 0x708 <SPI_ui8TransmitRecive>
+ 5ee:	90 e0       	ldi	r25, 0x00	; 0
+ 5f0:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 5f4:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+			break;//break the switch case
+ 5f8:	fe ce       	rjmp	.-516    	; 0x3f6 <main+0x4e>
+
+000005fa <__vector_10>:
+		}
+	}
+}
+
+ISR(TIMER0_COMP_vect)
+{
+ 5fa:	1f 92       	push	r1
+ 5fc:	0f 92       	push	r0
+ 5fe:	0f b6       	in	r0, 0x3f	; 63
+ 600:	0f 92       	push	r0
+ 602:	11 24       	eor	r1, r1
+ 604:	2f 93       	push	r18
+ 606:	3f 93       	push	r19
+ 608:	4f 93       	push	r20
+ 60a:	5f 93       	push	r21
+ 60c:	6f 93       	push	r22
+ 60e:	7f 93       	push	r23
+ 610:	8f 93       	push	r24
+ 612:	9f 93       	push	r25
+ 614:	af 93       	push	r26
+ 616:	bf 93       	push	r27
+ 618:	ef 93       	push	r30
+ 61a:	ff 93       	push	r31
+	counter++;//count the ticks of the timer zero
+ 61c:	80 91 63 00 	lds	r24, 0x0063	; 0x800063 <counter>
+ 620:	8f 5f       	subi	r24, 0xFF	; 255
+ 622:	80 93 63 00 	sts	0x0063, r24	; 0x800063 <counter>
+	if(counter>=10)//do that code every 10 ticks 
+ 626:	80 91 63 00 	lds	r24, 0x0063	; 0x800063 <counter>
+ 62a:	8a 30       	cpi	r24, 0x0A	; 10
+ 62c:	08 f4       	brcc	.+2      	; 0x630 <__vector_10+0x36>
+ 62e:	58 c0       	rjmp	.+176    	; 0x6e0 <__vector_10+0xe6>
+	{
+		counter=0;//clear the counter of ticks
+ 630:	10 92 63 00 	sts	0x0063, r1	; 0x800063 <counter>
+		temp_sensor_reading=(0.25*ADC_u16Read());//read the temperature from the temperature sensor connected to the ADC of the micro controller
+ 634:	0e 94 87 00 	call	0x10e	; 0x10e <ADC_u16Read>
+ 638:	bc 01       	movw	r22, r24
+ 63a:	80 e0       	ldi	r24, 0x00	; 0
+ 63c:	90 e0       	ldi	r25, 0x00	; 0
+ 63e:	0e 94 d8 03 	call	0x7b0	; 0x7b0 <__floatunsisf>
+ 642:	20 e0       	ldi	r18, 0x00	; 0
+ 644:	30 e0       	ldi	r19, 0x00	; 0
+ 646:	40 e8       	ldi	r20, 0x80	; 128
+ 648:	5e e3       	ldi	r21, 0x3E	; 62
+ 64a:	0e 94 66 04 	call	0x8cc	; 0x8cc <__mulsf3>
+ 64e:	0e 94 a9 03 	call	0x752	; 0x752 <__fixunssfsi>
+ 652:	70 93 65 00 	sts	0x0065, r23	; 0x800065 <temp_sensor_reading+0x1>
+ 656:	60 93 64 00 	sts	0x0064, r22	; 0x800064 <temp_sensor_reading>
+		if (temp_sensor_reading>=(required_temperature+1))//do that code if the read temperature if greater than required temperature by one or more
+ 65a:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 65e:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 662:	20 91 64 00 	lds	r18, 0x0064	; 0x800064 <temp_sensor_reading>
+ 666:	30 91 65 00 	lds	r19, 0x0065	; 0x800065 <temp_sensor_reading+0x1>
+ 66a:	01 96       	adiw	r24, 0x01	; 1
+ 66c:	28 17       	cp	r18, r24
+ 66e:	39 07       	cpc	r19, r25
+ 670:	40 f0       	brcs	.+16     	; 0x682 <__vector_10+0x88>
+		{
+			LED_vTurnOn(AIR_COND_PORT,AIR_COND_PIN);//turn on the led of the air conditioning
+ 672:	62 e0       	ldi	r22, 0x02	; 2
+ 674:	84 e4       	ldi	r24, 0x44	; 68
+ 676:	0e 94 c9 01 	call	0x392	; 0x392 <LED_vTurnOn>
+			last_air_conditioning_value=AIR_CONDTIONING_ON;//save the value of the state of the air conditioning
+ 67a:	81 e0       	ldi	r24, 0x01	; 1
+ 67c:	80 93 62 00 	sts	0x0062, r24	; 0x800062 <__data_end>
+ 680:	2f c0       	rjmp	.+94     	; 0x6e0 <__vector_10+0xe6>
+		}
+		else if (temp_sensor_reading<=(required_temperature-1))//do that code if the read temperature if lesser than required temperature by one or more
+ 682:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 686:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 68a:	20 91 64 00 	lds	r18, 0x0064	; 0x800064 <temp_sensor_reading>
+ 68e:	30 91 65 00 	lds	r19, 0x0065	; 0x800065 <temp_sensor_reading+0x1>
+ 692:	01 97       	sbiw	r24, 0x01	; 1
+ 694:	82 17       	cp	r24, r18
+ 696:	93 07       	cpc	r25, r19
+ 698:	38 f0       	brcs	.+14     	; 0x6a8 <__vector_10+0xae>
+		{
+			LED_vTurnOff(AIR_COND_PORT,AIR_COND_PIN);//turn off the led of the air conditioning
+ 69a:	62 e0       	ldi	r22, 0x02	; 2
+ 69c:	84 e4       	ldi	r24, 0x44	; 68
+ 69e:	0e 94 cd 01 	call	0x39a	; 0x39a <LED_vTurnOff>
+			last_air_conditioning_value=AIR_CONDTIONING_OFF;//save the value of the state of the air conditioning
+ 6a2:	10 92 62 00 	sts	0x0062, r1	; 0x800062 <__data_end>
+ 6a6:	1c c0       	rjmp	.+56     	; 0x6e0 <__vector_10+0xe6>
+		}
+		else if (required_temperature==temp_sensor_reading)//do that code if the read temperature is equal to the required temperature
+ 6a8:	20 91 60 00 	lds	r18, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 6ac:	30 91 61 00 	lds	r19, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 6b0:	80 91 64 00 	lds	r24, 0x0064	; 0x800064 <temp_sensor_reading>
+ 6b4:	90 91 65 00 	lds	r25, 0x0065	; 0x800065 <temp_sensor_reading+0x1>
+ 6b8:	28 17       	cp	r18, r24
+ 6ba:	39 07       	cpc	r19, r25
+ 6bc:	89 f4       	brne	.+34     	; 0x6e0 <__vector_10+0xe6>
+		{
+			if (last_air_conditioning_value==AIR_CONDTIONING_ON)//in the case of the last saved status of the air conditioning was on 
+ 6be:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <__data_end>
+ 6c2:	81 30       	cpi	r24, 0x01	; 1
+ 6c4:	29 f4       	brne	.+10     	; 0x6d0 <__vector_10+0xd6>
+			{
+				LED_vTurnOn(AIR_COND_PORT,AIR_COND_PIN);//turn on the led of the air conditioning
+ 6c6:	62 e0       	ldi	r22, 0x02	; 2
+ 6c8:	84 e4       	ldi	r24, 0x44	; 68
+ 6ca:	0e 94 c9 01 	call	0x392	; 0x392 <LED_vTurnOn>
+ 6ce:	08 c0       	rjmp	.+16     	; 0x6e0 <__vector_10+0xe6>
+			}
+			else if (last_air_conditioning_value==AIR_CONDTIONING_OFF)//in the case of the last saved status of the air conditioning was off 
+ 6d0:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <__data_end>
+ 6d4:	81 11       	cpse	r24, r1
+ 6d6:	04 c0       	rjmp	.+8      	; 0x6e0 <__vector_10+0xe6>
+			{
+				LED_vTurnOff(AIR_COND_PORT,AIR_COND_PIN);//turn off the led of the air conditioning
+ 6d8:	62 e0       	ldi	r22, 0x02	; 2
+ 6da:	84 e4       	ldi	r24, 0x44	; 68
+ 6dc:	0e 94 cd 01 	call	0x39a	; 0x39a <LED_vTurnOff>
+			}
+		}
+	}
+}
+ 6e0:	ff 91       	pop	r31
+ 6e2:	ef 91       	pop	r30
+ 6e4:	bf 91       	pop	r27
+ 6e6:	af 91       	pop	r26
+ 6e8:	9f 91       	pop	r25
+ 6ea:	8f 91       	pop	r24
+ 6ec:	7f 91       	pop	r23
+ 6ee:	6f 91       	pop	r22
+ 6f0:	5f 91       	pop	r21
+ 6f2:	4f 91       	pop	r20
+ 6f4:	3f 91       	pop	r19
+ 6f6:	2f 91       	pop	r18
+ 6f8:	0f 90       	pop	r0
+ 6fa:	0f be       	out	0x3f, r0	; 63
+ 6fc:	0f 90       	pop	r0
+ 6fe:	1f 90       	pop	r1
+ 700:	18 95       	reti
+
+00000702 <SPI_vInitSlave>:
+	SPCR |= (1<<SPE)|(1<<MSTR)|(1<<SPR0);//Enable the SPI,master mode ,Set the clock speed to F/16
+}
+
+void SPI_vInitSlave (void)
+{
+	DDRB |= (1<<SPI_MISO) ;//Set the port B miso(master in slave out ) pin as output
+ 702:	be 9a       	sbi	0x17, 6	; 23
+	SPCR |= (1<<SPE);//Enable the SPI
+ 704:	6e 9a       	sbi	0x0d, 6	; 13
+ 706:	08 95       	ret
+
+00000708 <SPI_ui8TransmitRecive>:
+}
+
+uint8 SPI_ui8TransmitRecive (uint8 data)
+{
+	SPDR = data;//move the given data to SPI Data register
+ 708:	8f b9       	out	0x0f, r24	; 15
+	
+	//in case of master send data and wait till the data are fully transmitted
+	//in case of slave wait the data to be transmitted by the master
+	while (((SPSR&(1<<SPIF))>>SPIF)==0)	//wait till the transmitting is done
+ 70a:	77 9b       	sbis	0x0e, 7	; 14
+ 70c:	fe cf       	rjmp	.-4      	; 0x70a <SPI_ui8TransmitRecive+0x2>
+	;									//SPI flag is set to one if the transmission is done
+	
+	return SPDR;//return the value of SPI Data register after the transmission or receiving is done
+ 70e:	8f b1       	in	r24, 0x0f	; 15
+ 710:	08 95       	ret
+
+00000712 <timer0_initializeCTC>:
+
+void timer0_initializeCTC(void)
+{
+	//Config OCR0
+	//OCR0 = the value to compare with
+	OCR0 = 78; //to achieve tick equal to 10 msec
+ 712:	8e e4       	ldi	r24, 0x4E	; 78
+ 714:	8c bf       	out	0x3c, r24	; 60
+	
+	//Set timer mode
+	//Set the mode as Compare match
+	SET_BIT(TCCR0, WGM01);
+ 716:	83 b7       	in	r24, 0x33	; 51
+ 718:	88 60       	ori	r24, 0x08	; 8
+ 71a:	83 bf       	out	0x33, r24	; 51
+	CLR_BIT(TCCR0, WGM00);
+ 71c:	83 b7       	in	r24, 0x33	; 51
+ 71e:	8f 7b       	andi	r24, 0xBF	; 191
+ 720:	83 bf       	out	0x33, r24	; 51
+	
+	//Configure clock
+	//set as clk/1024
+	SET_BIT(TCCR0, CS00);
+ 722:	83 b7       	in	r24, 0x33	; 51
+ 724:	81 60       	ori	r24, 0x01	; 1
+ 726:	83 bf       	out	0x33, r24	; 51
+	CLR_BIT(TCCR0, CS01);
+ 728:	83 b7       	in	r24, 0x33	; 51
+ 72a:	8d 7f       	andi	r24, 0xFD	; 253
+ 72c:	83 bf       	out	0x33, r24	; 51
+	SET_BIT(TCCR0, CS02);
+ 72e:	83 b7       	in	r24, 0x33	; 51
+ 730:	84 60       	ori	r24, 0x04	; 4
+ 732:	83 bf       	out	0x33, r24	; 51
+	
+	//Enable global interrupts
+	sei();
+ 734:	78 94       	sei
+	
+	//Enable timer 0 interrupt for compare match
+	SET_BIT(TIMSK, OCIE0);
+ 736:	89 b7       	in	r24, 0x39	; 57
+ 738:	82 60       	ori	r24, 0x02	; 2
+ 73a:	89 bf       	out	0x39, r24	; 57
+ 73c:	08 95       	ret
+
+0000073e <timer0_stop>:
+}
+
+void timer0_stop(void)
+{
+	//disable the clock to stop the counter
+	CLR_BIT(TCCR0, CS00);
+ 73e:	83 b7       	in	r24, 0x33	; 51
+ 740:	8e 7f       	andi	r24, 0xFE	; 254
+ 742:	83 bf       	out	0x33, r24	; 51
+	CLR_BIT(TCCR0, CS01);
+ 744:	83 b7       	in	r24, 0x33	; 51
+ 746:	8d 7f       	andi	r24, 0xFD	; 253
+ 748:	83 bf       	out	0x33, r24	; 51
+	CLR_BIT(TCCR0, CS02);
+ 74a:	83 b7       	in	r24, 0x33	; 51
+ 74c:	8b 7f       	andi	r24, 0xFB	; 251
+ 74e:	83 bf       	out	0x33, r24	; 51
+ 750:	08 95       	ret
+
+00000752 <__fixunssfsi>:
+ 752:	0e 94 45 04 	call	0x88a	; 0x88a <__fp_splitA>
+ 756:	88 f0       	brcs	.+34     	; 0x77a <__fixunssfsi+0x28>
+ 758:	9f 57       	subi	r25, 0x7F	; 127
+ 75a:	98 f0       	brcs	.+38     	; 0x782 <__fixunssfsi+0x30>
+ 75c:	b9 2f       	mov	r27, r25
+ 75e:	99 27       	eor	r25, r25
+ 760:	b7 51       	subi	r27, 0x17	; 23
+ 762:	b0 f0       	brcs	.+44     	; 0x790 <__fixunssfsi+0x3e>
+ 764:	e1 f0       	breq	.+56     	; 0x79e <__fixunssfsi+0x4c>
+ 766:	66 0f       	add	r22, r22
+ 768:	77 1f       	adc	r23, r23
+ 76a:	88 1f       	adc	r24, r24
+ 76c:	99 1f       	adc	r25, r25
+ 76e:	1a f0       	brmi	.+6      	; 0x776 <__fixunssfsi+0x24>
+ 770:	ba 95       	dec	r27
+ 772:	c9 f7       	brne	.-14     	; 0x766 <__fixunssfsi+0x14>
+ 774:	14 c0       	rjmp	.+40     	; 0x79e <__fixunssfsi+0x4c>
+ 776:	b1 30       	cpi	r27, 0x01	; 1
+ 778:	91 f0       	breq	.+36     	; 0x79e <__fixunssfsi+0x4c>
+ 77a:	0e 94 5f 04 	call	0x8be	; 0x8be <__fp_zero>
+ 77e:	b1 e0       	ldi	r27, 0x01	; 1
+ 780:	08 95       	ret
+ 782:	0c 94 5f 04 	jmp	0x8be	; 0x8be <__fp_zero>
+ 786:	67 2f       	mov	r22, r23
+ 788:	78 2f       	mov	r23, r24
+ 78a:	88 27       	eor	r24, r24
+ 78c:	b8 5f       	subi	r27, 0xF8	; 248
+ 78e:	39 f0       	breq	.+14     	; 0x79e <__fixunssfsi+0x4c>
+ 790:	b9 3f       	cpi	r27, 0xF9	; 249
+ 792:	cc f3       	brlt	.-14     	; 0x786 <__fixunssfsi+0x34>
+ 794:	86 95       	lsr	r24
+ 796:	77 95       	ror	r23
+ 798:	67 95       	ror	r22
+ 79a:	b3 95       	inc	r27
+ 79c:	d9 f7       	brne	.-10     	; 0x794 <__fixunssfsi+0x42>
+ 79e:	3e f4       	brtc	.+14     	; 0x7ae <__fixunssfsi+0x5c>
+ 7a0:	90 95       	com	r25
+ 7a2:	80 95       	com	r24
+ 7a4:	70 95       	com	r23
+ 7a6:	61 95       	neg	r22
+ 7a8:	7f 4f       	sbci	r23, 0xFF	; 255
+ 7aa:	8f 4f       	sbci	r24, 0xFF	; 255
+ 7ac:	9f 4f       	sbci	r25, 0xFF	; 255
+ 7ae:	08 95       	ret
+
+000007b0 <__floatunsisf>:
+ 7b0:	e8 94       	clt
+ 7b2:	09 c0       	rjmp	.+18     	; 0x7c6 <__floatsisf+0x12>
+
+000007b4 <__floatsisf>:
+ 7b4:	97 fb       	bst	r25, 7
+ 7b6:	3e f4       	brtc	.+14     	; 0x7c6 <__floatsisf+0x12>
+ 7b8:	90 95       	com	r25
+ 7ba:	80 95       	com	r24
+ 7bc:	70 95       	com	r23
+ 7be:	61 95       	neg	r22
+ 7c0:	7f 4f       	sbci	r23, 0xFF	; 255
+ 7c2:	8f 4f       	sbci	r24, 0xFF	; 255
+ 7c4:	9f 4f       	sbci	r25, 0xFF	; 255
+ 7c6:	99 23       	and	r25, r25
+ 7c8:	a9 f0       	breq	.+42     	; 0x7f4 <__floatsisf+0x40>
+ 7ca:	f9 2f       	mov	r31, r25
+ 7cc:	96 e9       	ldi	r25, 0x96	; 150
+ 7ce:	bb 27       	eor	r27, r27
+ 7d0:	93 95       	inc	r25
+ 7d2:	f6 95       	lsr	r31
+ 7d4:	87 95       	ror	r24
+ 7d6:	77 95       	ror	r23
+ 7d8:	67 95       	ror	r22
+ 7da:	b7 95       	ror	r27
+ 7dc:	f1 11       	cpse	r31, r1
+ 7de:	f8 cf       	rjmp	.-16     	; 0x7d0 <__floatsisf+0x1c>
+ 7e0:	fa f4       	brpl	.+62     	; 0x820 <__DATA_REGION_LENGTH__+0x20>
+ 7e2:	bb 0f       	add	r27, r27
+ 7e4:	11 f4       	brne	.+4      	; 0x7ea <__floatsisf+0x36>
+ 7e6:	60 ff       	sbrs	r22, 0
+ 7e8:	1b c0       	rjmp	.+54     	; 0x820 <__DATA_REGION_LENGTH__+0x20>
+ 7ea:	6f 5f       	subi	r22, 0xFF	; 255
+ 7ec:	7f 4f       	sbci	r23, 0xFF	; 255
+ 7ee:	8f 4f       	sbci	r24, 0xFF	; 255
+ 7f0:	9f 4f       	sbci	r25, 0xFF	; 255
+ 7f2:	16 c0       	rjmp	.+44     	; 0x820 <__DATA_REGION_LENGTH__+0x20>
+ 7f4:	88 23       	and	r24, r24
+ 7f6:	11 f0       	breq	.+4      	; 0x7fc <__floatsisf+0x48>
+ 7f8:	96 e9       	ldi	r25, 0x96	; 150
+ 7fa:	11 c0       	rjmp	.+34     	; 0x81e <__DATA_REGION_LENGTH__+0x1e>
+ 7fc:	77 23       	and	r23, r23
+ 7fe:	21 f0       	breq	.+8      	; 0x808 <__DATA_REGION_LENGTH__+0x8>
+ 800:	9e e8       	ldi	r25, 0x8E	; 142
+ 802:	87 2f       	mov	r24, r23
+ 804:	76 2f       	mov	r23, r22
+ 806:	05 c0       	rjmp	.+10     	; 0x812 <__DATA_REGION_LENGTH__+0x12>
+ 808:	66 23       	and	r22, r22
+ 80a:	71 f0       	breq	.+28     	; 0x828 <__DATA_REGION_LENGTH__+0x28>
+ 80c:	96 e8       	ldi	r25, 0x86	; 134
+ 80e:	86 2f       	mov	r24, r22
+ 810:	70 e0       	ldi	r23, 0x00	; 0
+ 812:	60 e0       	ldi	r22, 0x00	; 0
+ 814:	2a f0       	brmi	.+10     	; 0x820 <__DATA_REGION_LENGTH__+0x20>
+ 816:	9a 95       	dec	r25
+ 818:	66 0f       	add	r22, r22
+ 81a:	77 1f       	adc	r23, r23
+ 81c:	88 1f       	adc	r24, r24
+ 81e:	da f7       	brpl	.-10     	; 0x816 <__DATA_REGION_LENGTH__+0x16>
+ 820:	88 0f       	add	r24, r24
+ 822:	96 95       	lsr	r25
+ 824:	87 95       	ror	r24
+ 826:	97 f9       	bld	r25, 7
+ 828:	08 95       	ret
+
+0000082a <__fp_inf>:
+ 82a:	97 f9       	bld	r25, 7
+ 82c:	9f 67       	ori	r25, 0x7F	; 127
+ 82e:	80 e8       	ldi	r24, 0x80	; 128
+ 830:	70 e0       	ldi	r23, 0x00	; 0
+ 832:	60 e0       	ldi	r22, 0x00	; 0
+ 834:	08 95       	ret
+
+00000836 <__fp_nan>:
+ 836:	9f ef       	ldi	r25, 0xFF	; 255
+ 838:	80 ec       	ldi	r24, 0xC0	; 192
+ 83a:	08 95       	ret
+
+0000083c <__fp_pscA>:
+ 83c:	00 24       	eor	r0, r0
+ 83e:	0a 94       	dec	r0
+ 840:	16 16       	cp	r1, r22
+ 842:	17 06       	cpc	r1, r23
+ 844:	18 06       	cpc	r1, r24
+ 846:	09 06       	cpc	r0, r25
+ 848:	08 95       	ret
+
+0000084a <__fp_pscB>:
+ 84a:	00 24       	eor	r0, r0
+ 84c:	0a 94       	dec	r0
+ 84e:	12 16       	cp	r1, r18
+ 850:	13 06       	cpc	r1, r19
+ 852:	14 06       	cpc	r1, r20
+ 854:	05 06       	cpc	r0, r21
+ 856:	08 95       	ret
+
+00000858 <__fp_round>:
+ 858:	09 2e       	mov	r0, r25
+ 85a:	03 94       	inc	r0
+ 85c:	00 0c       	add	r0, r0
+ 85e:	11 f4       	brne	.+4      	; 0x864 <__stack+0x5>
+ 860:	88 23       	and	r24, r24
+ 862:	52 f0       	brmi	.+20     	; 0x878 <__stack+0x19>
+ 864:	bb 0f       	add	r27, r27
+ 866:	40 f4       	brcc	.+16     	; 0x878 <__stack+0x19>
+ 868:	bf 2b       	or	r27, r31
+ 86a:	11 f4       	brne	.+4      	; 0x870 <__stack+0x11>
+ 86c:	60 ff       	sbrs	r22, 0
+ 86e:	04 c0       	rjmp	.+8      	; 0x878 <__stack+0x19>
+ 870:	6f 5f       	subi	r22, 0xFF	; 255
+ 872:	7f 4f       	sbci	r23, 0xFF	; 255
+ 874:	8f 4f       	sbci	r24, 0xFF	; 255
+ 876:	9f 4f       	sbci	r25, 0xFF	; 255
+ 878:	08 95       	ret
+
+0000087a <__fp_split3>:
+ 87a:	57 fd       	sbrc	r21, 7
+ 87c:	90 58       	subi	r25, 0x80	; 128
+ 87e:	44 0f       	add	r20, r20
+ 880:	55 1f       	adc	r21, r21
+ 882:	59 f0       	breq	.+22     	; 0x89a <__fp_splitA+0x10>
+ 884:	5f 3f       	cpi	r21, 0xFF	; 255
+ 886:	71 f0       	breq	.+28     	; 0x8a4 <__fp_splitA+0x1a>
+ 888:	47 95       	ror	r20
+
+0000088a <__fp_splitA>:
+ 88a:	88 0f       	add	r24, r24
+ 88c:	97 fb       	bst	r25, 7
+ 88e:	99 1f       	adc	r25, r25
+ 890:	61 f0       	breq	.+24     	; 0x8aa <__fp_splitA+0x20>
+ 892:	9f 3f       	cpi	r25, 0xFF	; 255
+ 894:	79 f0       	breq	.+30     	; 0x8b4 <__fp_splitA+0x2a>
+ 896:	87 95       	ror	r24
+ 898:	08 95       	ret
+ 89a:	12 16       	cp	r1, r18
+ 89c:	13 06       	cpc	r1, r19
+ 89e:	14 06       	cpc	r1, r20
+ 8a0:	55 1f       	adc	r21, r21
+ 8a2:	f2 cf       	rjmp	.-28     	; 0x888 <__fp_split3+0xe>
+ 8a4:	46 95       	lsr	r20
+ 8a6:	f1 df       	rcall	.-30     	; 0x88a <__fp_splitA>
+ 8a8:	08 c0       	rjmp	.+16     	; 0x8ba <__fp_splitA+0x30>
+ 8aa:	16 16       	cp	r1, r22
+ 8ac:	17 06       	cpc	r1, r23
+ 8ae:	18 06       	cpc	r1, r24
+ 8b0:	99 1f       	adc	r25, r25
+ 8b2:	f1 cf       	rjmp	.-30     	; 0x896 <__fp_splitA+0xc>
+ 8b4:	86 95       	lsr	r24
+ 8b6:	71 05       	cpc	r23, r1
+ 8b8:	61 05       	cpc	r22, r1
+ 8ba:	08 94       	sec
+ 8bc:	08 95       	ret
+
+000008be <__fp_zero>:
+ 8be:	e8 94       	clt
+
+000008c0 <__fp_szero>:
+ 8c0:	bb 27       	eor	r27, r27
+ 8c2:	66 27       	eor	r22, r22
+ 8c4:	77 27       	eor	r23, r23
+ 8c6:	cb 01       	movw	r24, r22
+ 8c8:	97 f9       	bld	r25, 7
+ 8ca:	08 95       	ret
+
+000008cc <__mulsf3>:
+ 8cc:	0e 94 79 04 	call	0x8f2	; 0x8f2 <__mulsf3x>
+ 8d0:	0c 94 2c 04 	jmp	0x858	; 0x858 <__fp_round>
+ 8d4:	0e 94 1e 04 	call	0x83c	; 0x83c <__fp_pscA>
+ 8d8:	38 f0       	brcs	.+14     	; 0x8e8 <__mulsf3+0x1c>
+ 8da:	0e 94 25 04 	call	0x84a	; 0x84a <__fp_pscB>
+ 8de:	20 f0       	brcs	.+8      	; 0x8e8 <__mulsf3+0x1c>
+ 8e0:	95 23       	and	r25, r21
+ 8e2:	11 f0       	breq	.+4      	; 0x8e8 <__mulsf3+0x1c>
+ 8e4:	0c 94 15 04 	jmp	0x82a	; 0x82a <__fp_inf>
+ 8e8:	0c 94 1b 04 	jmp	0x836	; 0x836 <__fp_nan>
+ 8ec:	11 24       	eor	r1, r1
+ 8ee:	0c 94 60 04 	jmp	0x8c0	; 0x8c0 <__fp_szero>
+
+000008f2 <__mulsf3x>:
+ 8f2:	0e 94 3d 04 	call	0x87a	; 0x87a <__fp_split3>
+ 8f6:	70 f3       	brcs	.-36     	; 0x8d4 <__mulsf3+0x8>
+
+000008f8 <__mulsf3_pse>:
+ 8f8:	95 9f       	mul	r25, r21
+ 8fa:	c1 f3       	breq	.-16     	; 0x8ec <__mulsf3+0x20>
+ 8fc:	95 0f       	add	r25, r21
+ 8fe:	50 e0       	ldi	r21, 0x00	; 0
+ 900:	55 1f       	adc	r21, r21
+ 902:	62 9f       	mul	r22, r18
+ 904:	f0 01       	movw	r30, r0
+ 906:	72 9f       	mul	r23, r18
+ 908:	bb 27       	eor	r27, r27
+ 90a:	f0 0d       	add	r31, r0
+ 90c:	b1 1d       	adc	r27, r1
+ 90e:	63 9f       	mul	r22, r19
+ 910:	aa 27       	eor	r26, r26
+ 912:	f0 0d       	add	r31, r0
+ 914:	b1 1d       	adc	r27, r1
+ 916:	aa 1f       	adc	r26, r26
+ 918:	64 9f       	mul	r22, r20
+ 91a:	66 27       	eor	r22, r22
+ 91c:	b0 0d       	add	r27, r0
+ 91e:	a1 1d       	adc	r26, r1
+ 920:	66 1f       	adc	r22, r22
+ 922:	82 9f       	mul	r24, r18
+ 924:	22 27       	eor	r18, r18
+ 926:	b0 0d       	add	r27, r0
+ 928:	a1 1d       	adc	r26, r1
+ 92a:	62 1f       	adc	r22, r18
+ 92c:	73 9f       	mul	r23, r19
+ 92e:	b0 0d       	add	r27, r0
+ 930:	a1 1d       	adc	r26, r1
+ 932:	62 1f       	adc	r22, r18
+ 934:	83 9f       	mul	r24, r19
+ 936:	a0 0d       	add	r26, r0
+ 938:	61 1d       	adc	r22, r1
+ 93a:	22 1f       	adc	r18, r18
+ 93c:	74 9f       	mul	r23, r20
+ 93e:	33 27       	eor	r19, r19
+ 940:	a0 0d       	add	r26, r0
+ 942:	61 1d       	adc	r22, r1
+ 944:	23 1f       	adc	r18, r19
+ 946:	84 9f       	mul	r24, r20
+ 948:	60 0d       	add	r22, r0
+ 94a:	21 1d       	adc	r18, r1
+ 94c:	82 2f       	mov	r24, r18
+ 94e:	76 2f       	mov	r23, r22
+ 950:	6a 2f       	mov	r22, r26
+ 952:	11 24       	eor	r1, r1
+ 954:	9f 57       	subi	r25, 0x7F	; 127
+ 956:	50 40       	sbci	r21, 0x00	; 0
+ 958:	9a f0       	brmi	.+38     	; 0x980 <__mulsf3_pse+0x88>
+ 95a:	f1 f0       	breq	.+60     	; 0x998 <__mulsf3_pse+0xa0>
+ 95c:	88 23       	and	r24, r24
+ 95e:	4a f0       	brmi	.+18     	; 0x972 <__mulsf3_pse+0x7a>
+ 960:	ee 0f       	add	r30, r30
+ 962:	ff 1f       	adc	r31, r31
+ 964:	bb 1f       	adc	r27, r27
+ 966:	66 1f       	adc	r22, r22
+ 968:	77 1f       	adc	r23, r23
+ 96a:	88 1f       	adc	r24, r24
+ 96c:	91 50       	subi	r25, 0x01	; 1
+ 96e:	50 40       	sbci	r21, 0x00	; 0
+ 970:	a9 f7       	brne	.-22     	; 0x95c <__mulsf3_pse+0x64>
+ 972:	9e 3f       	cpi	r25, 0xFE	; 254
+ 974:	51 05       	cpc	r21, r1
+ 976:	80 f0       	brcs	.+32     	; 0x998 <__mulsf3_pse+0xa0>
+ 978:	0c 94 15 04 	jmp	0x82a	; 0x82a <__fp_inf>
+ 97c:	0c 94 60 04 	jmp	0x8c0	; 0x8c0 <__fp_szero>
+ 980:	5f 3f       	cpi	r21, 0xFF	; 255
+ 982:	e4 f3       	brlt	.-8      	; 0x97c <__mulsf3_pse+0x84>
+ 984:	98 3e       	cpi	r25, 0xE8	; 232
+ 986:	d4 f3       	brlt	.-12     	; 0x97c <__mulsf3_pse+0x84>
+ 988:	86 95       	lsr	r24
+ 98a:	77 95       	ror	r23
+ 98c:	67 95       	ror	r22
+ 98e:	b7 95       	ror	r27
+ 990:	f7 95       	ror	r31
+ 992:	e7 95       	ror	r30
+ 994:	9f 5f       	subi	r25, 0xFF	; 255
+ 996:	c1 f7       	brne	.-16     	; 0x988 <__mulsf3_pse+0x90>
+ 998:	fe 2b       	or	r31, r30
+ 99a:	88 0f       	add	r24, r24
+ 99c:	91 1d       	adc	r25, r1
+ 99e:	96 95       	lsr	r25
+ 9a0:	87 95       	ror	r24
+ 9a2:	97 f9       	bld	r25, 7
+ 9a4:	08 95       	ret
+
+000009a6 <__tablejump2__>:
+ 9a6:	ee 0f       	add	r30, r30
+ 9a8:	ff 1f       	adc	r31, r31
+ 9aa:	05 90       	lpm	r0, Z+
+ 9ac:	f4 91       	lpm	r31, Z
+ 9ae:	e0 2d       	mov	r30, r0
+ 9b0:	09 94       	ijmp
+
+000009b2 <_exit>:
+ 9b2:	f8 94       	cli
+
+000009b4 <__stop_program>:
+ 9b4:	ff cf       	rjmp	.-2      	; 0x9b4 <__stop_program>
